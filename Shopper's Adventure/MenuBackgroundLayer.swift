@@ -27,6 +27,7 @@ class MenuBackgroundLayer: SKNode {
         let background2 = SKSpriteNode(imageNamed: "background02")
         let background3 = SKSpriteNode(imageNamed: "background03")
         
+        
         background.zPosition = 0
         background1.zPosition = 3
         background2.zPosition = 2

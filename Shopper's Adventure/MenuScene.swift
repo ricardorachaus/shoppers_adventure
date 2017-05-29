@@ -7,35 +7,19 @@
 //
 
 import SpriteKit
-import AVFoundation
 
 class MenuScene: SKScene {
     // Menu sprites
     var backgroundLayer: MenuBackgroundLayer?
     var shopButton =  SKSpriteNode()
     
-    // Menu music
-    let music: AVAudioPlayer? = {
-        guard let url = Bundle.main.url(forResource: "The Misadventure Begins", withExtension: "mp3") else {
-            return nil
-        }
-        do {
-            let player = try AVAudioPlayer(contentsOf: url)
-            player.numberOfLoops -= 1
-            return player
-        }
-        catch {
-            return nil
-        }
-    }()
-    
     // MARK: - Init functions
     
     override init(size: CGSize) {
         super.init(size: size)
         
+        AudioManager.audioManager.playMenuMusic()
         initializaVariables()
-        playMusic()
         loadMenuSprites()
     }
     
@@ -59,12 +43,6 @@ class MenuScene: SKScene {
         addChild(shopButton)
     }
     
-    // Play background music
-    func playMusic() {
-        music?.volume = 0.5
-        music?.play()
-    }
-    
 }
 
 
@@ -82,9 +60,9 @@ extension MenuScene {
     
     // Load the game scene and stop music
     func loadGameScene() {
+        AudioManager.audioManager.stopMusic()
         let gameScene = GameScene(size: size)
         gameScene.scaleMode = .aspectFill
-        music?.stop()
         view?.presentScene(gameScene, transition: SKTransition.fade(withDuration: 0.5))
     }
 }

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		364298E21EDB8E4D000D6751 /* The Misadventure Begins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 364298E11EDB8E4D000D6751 /* The Misadventure Begins.mp3 */; };
 		366A2B801EDB856D00A8FDAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2B7F1EDB856D00A8FDAC /* AppDelegate.swift */; };
-		366A2B821EDB856E00A8FDAC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 366A2B811EDB856E00A8FDAC /* GameScene.sks */; };
-		366A2B841EDB856E00A8FDAC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 366A2B831EDB856E00A8FDAC /* Actions.sks */; };
 		366A2B861EDB856E00A8FDAC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2B851EDB856E00A8FDAC /* GameScene.swift */; };
 		366A2B881EDB856E00A8FDAC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2B871EDB856E00A8FDAC /* GameViewController.swift */; };
 		366A2B8B1EDB856E00A8FDAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366A2B891EDB856E00A8FDAC /* Main.storyboard */; };
@@ -19,14 +17,19 @@
 		366A2BA01EDB875A00A8FDAC /* MainMenu.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 366A2B9F1EDB875A00A8FDAC /* MainMenu.atlas */; };
 		366A2BA21EDB876600A8FDAC /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2BA11EDB876600A8FDAC /* MenuScene.swift */; };
 		366A2BA51EDB87A300A8FDAC /* MenuBackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2BA41EDB87A300A8FDAC /* MenuBackgroundLayer.swift */; };
+		3689BD7A1EDC6392009EA8A2 /* AKAnalogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD761EDC6392009EA8A2 /* AKAnalogic.swift */; };
+		3689BD7B1EDC6392009EA8A2 /* AKBigStickNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD771EDC6392009EA8A2 /* AKBigStickNode.swift */; };
+		3689BD7F1EDC64B7009EA8A2 /* FirstStageBackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD7E1EDC64B7009EA8A2 /* FirstStageBackgroundLayer.swift */; };
+		3689BD811EDC64C1009EA8A2 /* Stage1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3689BD801EDC64C1009EA8A2 /* Stage1.atlas */; };
+		3689BD841EDC6922009EA8A2 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD831EDC6922009EA8A2 /* AudioManager.swift */; };
+		3689BD861EDC69B1009EA8A2 /* AudioType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD851EDC69B1009EA8A2 /* AudioType.swift */; };
+		3689BD881EDC6B61009EA8A2 /* AudioProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD871EDC6B61009EA8A2 /* AudioProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		364298E11EDB8E4D000D6751 /* The Misadventure Begins.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Misadventure Begins.mp3"; sourceTree = "<group>"; };
 		366A2B7C1EDB856D00A8FDAC /* Shopper's Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopper's Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		366A2B7F1EDB856D00A8FDAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		366A2B811EDB856E00A8FDAC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		366A2B831EDB856E00A8FDAC /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		366A2B851EDB856E00A8FDAC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		366A2B871EDB856E00A8FDAC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		366A2B8A1EDB856E00A8FDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,14 @@
 		366A2B9F1EDB875A00A8FDAC /* MainMenu.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = MainMenu.atlas; sourceTree = "<group>"; };
 		366A2BA11EDB876600A8FDAC /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		366A2BA41EDB87A300A8FDAC /* MenuBackgroundLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBackgroundLayer.swift; sourceTree = "<group>"; };
+		3689BD761EDC6392009EA8A2 /* AKAnalogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKAnalogic.swift; sourceTree = "<group>"; };
+		3689BD771EDC6392009EA8A2 /* AKBigStickNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKBigStickNode.swift; sourceTree = "<group>"; };
+		3689BD781EDC6392009EA8A2 /* AnalogicKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogicKit.h; sourceTree = "<group>"; };
+		3689BD7E1EDC64B7009EA8A2 /* FirstStageBackgroundLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStageBackgroundLayer.swift; sourceTree = "<group>"; };
+		3689BD801EDC64C1009EA8A2 /* Stage1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Stage1.atlas; sourceTree = "<group>"; };
+		3689BD831EDC6922009EA8A2 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		3689BD851EDC69B1009EA8A2 /* AudioType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioType.swift; sourceTree = "<group>"; };
+		3689BD871EDC6B61009EA8A2 /* AudioProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +87,14 @@
 		366A2B7E1EDB856D00A8FDAC /* Shopper's Adventure */ = {
 			isa = PBXGroup;
 			children = (
+				3689BD821EDC64D6009EA8A2 /* Audio */,
 				366A2B9C1EDB86E200A8FDAC /* Misc */,
 				366A2BA31EDB879700A8FDAC /* Layers */,
 				366A2B9B1EDB86CF00A8FDAC /* Controllers */,
 				366A2B9D1EDB86F200A8FDAC /* Protocols */,
 				366A2B9A1EDB86C400A8FDAC /* Scenes */,
 				366A2B9E1EDB871000A8FDAC /* Resources */,
+				3689BD751EDC6392009EA8A2 /* AnalogicKit */,
 			);
 			path = "Shopper's Adventure";
 			sourceTree = "<group>";
@@ -107,10 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				366A2B7F1EDB856D00A8FDAC /* AppDelegate.swift */,
-				366A2B811EDB856E00A8FDAC /* GameScene.sks */,
-				366A2B831EDB856E00A8FDAC /* Actions.sks */,
-				366A2B891EDB856E00A8FDAC /* Main.storyboard */,
-				366A2B8C1EDB856E00A8FDAC /* Assets.xcassets */,
 				366A2B8E1EDB856E00A8FDAC /* LaunchScreen.storyboard */,
 				366A2B911EDB856E00A8FDAC /* Info.plist */,
 			);
@@ -120,6 +129,7 @@
 		366A2B9D1EDB86F200A8FDAC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3689BD871EDC6B61009EA8A2 /* AudioProtocol.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -127,6 +137,9 @@
 		366A2B9E1EDB871000A8FDAC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3689BD801EDC64C1009EA8A2 /* Stage1.atlas */,
+				366A2B8C1EDB856E00A8FDAC /* Assets.xcassets */,
+				366A2B891EDB856E00A8FDAC /* Main.storyboard */,
 				364298E31EDB8E54000D6751 /* Music */,
 				366A2B9F1EDB875A00A8FDAC /* MainMenu.atlas */,
 			);
@@ -137,8 +150,28 @@
 			isa = PBXGroup;
 			children = (
 				366A2BA41EDB87A300A8FDAC /* MenuBackgroundLayer.swift */,
+				3689BD7E1EDC64B7009EA8A2 /* FirstStageBackgroundLayer.swift */,
 			);
 			name = Layers;
+			sourceTree = "<group>";
+		};
+		3689BD751EDC6392009EA8A2 /* AnalogicKit */ = {
+			isa = PBXGroup;
+			children = (
+				3689BD761EDC6392009EA8A2 /* AKAnalogic.swift */,
+				3689BD771EDC6392009EA8A2 /* AKBigStickNode.swift */,
+				3689BD781EDC6392009EA8A2 /* AnalogicKit.h */,
+			);
+			path = AnalogicKit;
+			sourceTree = "<group>";
+		};
+		3689BD821EDC64D6009EA8A2 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				3689BD831EDC6922009EA8A2 /* AudioManager.swift */,
+				3689BD851EDC69B1009EA8A2 /* AudioType.swift */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,13 +234,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3689BD811EDC64C1009EA8A2 /* Stage1.atlas in Resources */,
 				366A2B8B1EDB856E00A8FDAC /* Main.storyboard in Resources */,
-				366A2B821EDB856E00A8FDAC /* GameScene.sks in Resources */,
 				366A2B8D1EDB856E00A8FDAC /* Assets.xcassets in Resources */,
 				364298E21EDB8E4D000D6751 /* The Misadventure Begins.mp3 in Resources */,
 				366A2BA01EDB875A00A8FDAC /* MainMenu.atlas in Resources */,
 				366A2B901EDB856E00A8FDAC /* LaunchScreen.storyboard in Resources */,
-				366A2B841EDB856E00A8FDAC /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,9 +252,15 @@
 			files = (
 				366A2B861EDB856E00A8FDAC /* GameScene.swift in Sources */,
 				366A2BA51EDB87A300A8FDAC /* MenuBackgroundLayer.swift in Sources */,
+				3689BD881EDC6B61009EA8A2 /* AudioProtocol.swift in Sources */,
+				3689BD861EDC69B1009EA8A2 /* AudioType.swift in Sources */,
 				366A2B881EDB856E00A8FDAC /* GameViewController.swift in Sources */,
+				3689BD7F1EDC64B7009EA8A2 /* FirstStageBackgroundLayer.swift in Sources */,
+				3689BD7B1EDC6392009EA8A2 /* AKBigStickNode.swift in Sources */,
 				366A2BA21EDB876600A8FDAC /* MenuScene.swift in Sources */,
+				3689BD841EDC6922009EA8A2 /* AudioManager.swift in Sources */,
 				366A2B801EDB856D00A8FDAC /* AppDelegate.swift in Sources */,
+				3689BD7A1EDC6392009EA8A2 /* AKAnalogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
