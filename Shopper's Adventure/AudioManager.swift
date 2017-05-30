@@ -8,23 +8,26 @@
 
 import AVFoundation
 
-class AudioManager: AudioProtocol {
+class AudioManager: AudioDelegate {
     static let audioManager = AudioManager()
     fileprivate init() {}
     
-    // Menu music
+    // Music played along the game
     internal var music: AVAudioPlayer?
     
+    // Start playing menu music
     func playMenuMusic() {
         music = startMusic(audioType: .menu)
         music?.volume = 0.5
         music?.play()
     }
     
+    // Stop music
     func stopMusic() {
         music?.stop()
     }
     
+    // Initilize music based on it's type
     func startMusic(audioType: AudioType) -> AVAudioPlayer? {
         let music: AVAudioPlayer? = {
             guard let url = Bundle.main.url(forResource: audioType.musicName, withExtension: "mp3") else {

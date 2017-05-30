@@ -46,6 +46,16 @@ class FirstStageBackgroundLayer: SKNode {
         background9.zPosition = 2
         background10.zPosition = 1
         
+        background1.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: position.x * 2, height: 40))
+        background1.physicsBody?.affectedByGravity = false
+        background1.physicsBody?.allowsRotation = false
+        background1.physicsBody?.restitution = 0
+        background1.physicsBody?.mass = 10000
+        background1.physicsBody?.categoryBitMask = CollisionType.ground.rawValue
+        background1.physicsBody?.collisionBitMask = CollisionType.player.rawValue
+        background1.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+        
+        
         layers.append(contentsOf: [background, background1, background2, background3,
                                    background4, background5, background6, background7,
                                    background8, background9, background10])
@@ -56,6 +66,9 @@ class FirstStageBackgroundLayer: SKNode {
             layer.physicsBody?.restitution = 0
             self.addChild(layer)
         }
+        
+        background1.position = CGPoint(x: position.x, y: 14)
+
     }
     
     func adjustLayerSize(size: CGSize) {

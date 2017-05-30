@@ -1,5 +1,5 @@
 //
-//  AudioProtocol.swift
+//  AudioDelegate.swift
 //  Shopper's Adventure
 //
 //  Created by Rachaus on 29/05/17.
@@ -8,7 +8,7 @@
 
 import AVFoundation
 
-protocol AudioProtocol {
+protocol AudioDelegate {
     var music: AVAudioPlayer? { get set }
     
     func playMenuMusic()

@@ -1,5 +1,5 @@
 //
-//  MainMenuScene.swift
+//  MenuScene.swift
 //  Shopper's Adventure
 //
 //  Created by Rachaus on 28/05/17.
