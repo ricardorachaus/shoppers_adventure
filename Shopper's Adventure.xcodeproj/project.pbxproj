@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36018C6C1EDFACDF00A59A0B /* AnalogStick.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 36018C6B1EDFACDF00A59A0B /* AnalogStick.atlas */; };
+		360CA54F1EDDFB4100F33AC0 /* Shield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CA54E1EDDFB4100F33AC0 /* Shield.swift */; };
+		360CA5511EDDFB9E00F33AC0 /* PlayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CA5501EDDFB9E00F33AC0 /* PlayerType.swift */; };
 		364298E21EDB8E4D000D6751 /* The Misadventure Begins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 364298E11EDB8E4D000D6751 /* The Misadventure Begins.mp3 */; };
 		366A2B801EDB856D00A8FDAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2B7F1EDB856D00A8FDAC /* AppDelegate.swift */; };
 		366A2B861EDB856E00A8FDAC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2B851EDB856E00A8FDAC /* GameScene.swift */; };
@@ -17,8 +20,6 @@
 		366A2BA01EDB875A00A8FDAC /* MainMenu.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 366A2B9F1EDB875A00A8FDAC /* MainMenu.atlas */; };
 		366A2BA21EDB876600A8FDAC /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2BA11EDB876600A8FDAC /* MenuScene.swift */; };
 		366A2BA51EDB87A300A8FDAC /* MenuBackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2BA41EDB87A300A8FDAC /* MenuBackgroundLayer.swift */; };
-		3689BD7A1EDC6392009EA8A2 /* AKAnalogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD761EDC6392009EA8A2 /* AKAnalogic.swift */; };
-		3689BD7B1EDC6392009EA8A2 /* AKBigStickNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD771EDC6392009EA8A2 /* AKBigStickNode.swift */; };
 		3689BD7F1EDC64B7009EA8A2 /* FirstStageBackgroundLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD7E1EDC64B7009EA8A2 /* FirstStageBackgroundLayer.swift */; };
 		3689BD811EDC64C1009EA8A2 /* Stage1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3689BD801EDC64C1009EA8A2 /* Stage1.atlas */; };
 		3689BD841EDC6922009EA8A2 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD831EDC6922009EA8A2 /* AudioManager.swift */; };
@@ -27,10 +28,18 @@
 		3689BD8B1EDC76D7009EA8A2 /* CollisionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD8A1EDC76D7009EA8A2 /* CollisionType.swift */; };
 		3689BD8E1EDC777D009EA8A2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD8D1EDC777D009EA8A2 /* Player.swift */; };
 		3689BD901EDC77C8009EA8A2 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD8F1EDC77C8009EA8A2 /* GameObject.swift */; };
-		3689BD921EDC787C009EA8A2 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3689BD911EDC787C009EA8A2 /* 2.png */; };
+		369711A51EDD17E300D69FC5 /* Characters.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 369711A41EDD17E300D69FC5 /* Characters.atlas */; };
+		36E9DA5F1EDDE0960061ECD2 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9DA5E1EDDE0960061ECD2 /* Weapon.swift */; };
+		36E9DA611EDDE10A0061ECD2 /* WeaponType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9DA601EDDE10A0061ECD2 /* WeaponType.swift */; };
+		36E9DA671EDDE1C20061ECD2 /* MonsterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9DA661EDDE1C20061ECD2 /* MonsterType.swift */; };
+		36F098CB1EE02599007FEBB7 /* PlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F098C91EE02599007FEBB7 /* PlayerProtocol.swift */; };
+		36F098CD1EE025CD007FEBB7 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F098CC1EE025CD007FEBB7 /* Monster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36018C6B1EDFACDF00A59A0B /* AnalogStick.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = AnalogStick.atlas; sourceTree = "<group>"; };
+		360CA54E1EDDFB4100F33AC0 /* Shield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shield.swift; sourceTree = "<group>"; };
+		360CA5501EDDFB9E00F33AC0 /* PlayerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerType.swift; sourceTree = "<group>"; };
 		364298E11EDB8E4D000D6751 /* The Misadventure Begins.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Misadventure Begins.mp3"; sourceTree = "<group>"; };
 		366A2B7C1EDB856D00A8FDAC /* Shopper's Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopper's Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		366A2B7F1EDB856D00A8FDAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,9 +52,6 @@
 		366A2B9F1EDB875A00A8FDAC /* MainMenu.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = MainMenu.atlas; sourceTree = "<group>"; };
 		366A2BA11EDB876600A8FDAC /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		366A2BA41EDB87A300A8FDAC /* MenuBackgroundLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBackgroundLayer.swift; sourceTree = "<group>"; };
-		3689BD761EDC6392009EA8A2 /* AKAnalogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKAnalogic.swift; sourceTree = "<group>"; };
-		3689BD771EDC6392009EA8A2 /* AKBigStickNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKBigStickNode.swift; sourceTree = "<group>"; };
-		3689BD781EDC6392009EA8A2 /* AnalogicKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogicKit.h; sourceTree = "<group>"; };
 		3689BD7E1EDC64B7009EA8A2 /* FirstStageBackgroundLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStageBackgroundLayer.swift; sourceTree = "<group>"; };
 		3689BD801EDC64C1009EA8A2 /* Stage1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Stage1.atlas; sourceTree = "<group>"; };
 		3689BD831EDC6922009EA8A2 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
@@ -54,7 +60,12 @@
 		3689BD8A1EDC76D7009EA8A2 /* CollisionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionType.swift; sourceTree = "<group>"; };
 		3689BD8D1EDC777D009EA8A2 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		3689BD8F1EDC77C8009EA8A2 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
-		3689BD911EDC787C009EA8A2 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		369711A41EDD17E300D69FC5 /* Characters.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Characters.atlas; sourceTree = "<group>"; };
+		36E9DA5E1EDDE0960061ECD2 /* Weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		36E9DA601EDDE10A0061ECD2 /* WeaponType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponType.swift; sourceTree = "<group>"; };
+		36E9DA661EDDE1C20061ECD2 /* MonsterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterType.swift; sourceTree = "<group>"; };
+		36F098C91EE02599007FEBB7 /* PlayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProtocol.swift; sourceTree = "<group>"; };
+		36F098CC1EE025CD007FEBB7 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,15 +107,14 @@
 		366A2B7E1EDB856D00A8FDAC /* Shopper's Adventure */ = {
 			isa = PBXGroup;
 			children = (
+				366A2B9C1EDB86E200A8FDAC /* Misc */,
+				366A2B9B1EDB86CF00A8FDAC /* Controllers */,
 				3689BD8C1EDC7758009EA8A2 /* Characters */,
 				366A2BA31EDB879700A8FDAC /* Layers */,
-				366A2B9B1EDB86CF00A8FDAC /* Controllers */,
 				366A2B9A1EDB86C400A8FDAC /* Scenes */,
-				366A2B9C1EDB86E200A8FDAC /* Misc */,
-				3689BD821EDC64D6009EA8A2 /* Audio */,
 				366A2B9D1EDB86F200A8FDAC /* Protocols */,
+				3689BD821EDC64D6009EA8A2 /* Audio */,
 				3689BD891EDC769C009EA8A2 /* Enums */,
-				3689BD751EDC6392009EA8A2 /* AnalogicKit */,
 			);
 			path = "Shopper's Adventure";
 			sourceTree = "<group>";
@@ -140,6 +150,10 @@
 			isa = PBXGroup;
 			children = (
 				3689BD871EDC6B61009EA8A2 /* AudioDelegate.swift */,
+				36E9DA5E1EDDE0960061ECD2 /* Weapon.swift */,
+				360CA54E1EDDFB4100F33AC0 /* Shield.swift */,
+				36F098C91EE02599007FEBB7 /* PlayerProtocol.swift */,
+				36F098CC1EE025CD007FEBB7 /* Monster.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -147,7 +161,8 @@
 		366A2B9E1EDB871000A8FDAC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3689BD911EDC787C009EA8A2 /* 2.png */,
+				36018C6B1EDFACDF00A59A0B /* AnalogStick.atlas */,
+				369711A41EDD17E300D69FC5 /* Characters.atlas */,
 				3689BD801EDC64C1009EA8A2 /* Stage1.atlas */,
 				366A2B8C1EDB856E00A8FDAC /* Assets.xcassets */,
 				366A2B891EDB856E00A8FDAC /* Main.storyboard */,
@@ -167,16 +182,6 @@
 			name = Layers;
 			sourceTree = "<group>";
 		};
-		3689BD751EDC6392009EA8A2 /* AnalogicKit */ = {
-			isa = PBXGroup;
-			children = (
-				3689BD761EDC6392009EA8A2 /* AKAnalogic.swift */,
-				3689BD771EDC6392009EA8A2 /* AKBigStickNode.swift */,
-				3689BD781EDC6392009EA8A2 /* AnalogicKit.h */,
-			);
-			path = AnalogicKit;
-			sourceTree = "<group>";
-		};
 		3689BD821EDC64D6009EA8A2 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +195,9 @@
 			children = (
 				3689BD851EDC69B1009EA8A2 /* AudioType.swift */,
 				3689BD8A1EDC76D7009EA8A2 /* CollisionType.swift */,
+				36E9DA601EDDE10A0061ECD2 /* WeaponType.swift */,
+				36E9DA661EDDE1C20061ECD2 /* MonsterType.swift */,
+				360CA5501EDDFB9E00F33AC0 /* PlayerType.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -265,11 +273,12 @@
 			files = (
 				3689BD811EDC64C1009EA8A2 /* Stage1.atlas in Resources */,
 				366A2B8B1EDB856E00A8FDAC /* Main.storyboard in Resources */,
-				3689BD921EDC787C009EA8A2 /* 2.png in Resources */,
 				366A2B8D1EDB856E00A8FDAC /* Assets.xcassets in Resources */,
 				364298E21EDB8E4D000D6751 /* The Misadventure Begins.mp3 in Resources */,
+				36018C6C1EDFACDF00A59A0B /* AnalogStick.atlas in Resources */,
 				366A2BA01EDB875A00A8FDAC /* MainMenu.atlas in Resources */,
 				366A2B901EDB856E00A8FDAC /* LaunchScreen.storyboard in Resources */,
+				369711A51EDD17E300D69FC5 /* Characters.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,18 +291,23 @@
 			files = (
 				3689BD8B1EDC76D7009EA8A2 /* CollisionType.swift in Sources */,
 				366A2B861EDB856E00A8FDAC /* GameScene.swift in Sources */,
+				36F098CB1EE02599007FEBB7 /* PlayerProtocol.swift in Sources */,
 				3689BD901EDC77C8009EA8A2 /* GameObject.swift in Sources */,
 				366A2BA51EDB87A300A8FDAC /* MenuBackgroundLayer.swift in Sources */,
 				3689BD881EDC6B61009EA8A2 /* AudioDelegate.swift in Sources */,
+				36E9DA5F1EDDE0960061ECD2 /* Weapon.swift in Sources */,
 				3689BD861EDC69B1009EA8A2 /* AudioType.swift in Sources */,
+				36E9DA611EDDE10A0061ECD2 /* WeaponType.swift in Sources */,
 				3689BD8E1EDC777D009EA8A2 /* Player.swift in Sources */,
 				366A2B881EDB856E00A8FDAC /* GameViewController.swift in Sources */,
 				3689BD7F1EDC64B7009EA8A2 /* FirstStageBackgroundLayer.swift in Sources */,
-				3689BD7B1EDC6392009EA8A2 /* AKBigStickNode.swift in Sources */,
 				366A2BA21EDB876600A8FDAC /* MenuScene.swift in Sources */,
+				36E9DA671EDDE1C20061ECD2 /* MonsterType.swift in Sources */,
+				36F098CD1EE025CD007FEBB7 /* Monster.swift in Sources */,
+				360CA5511EDDFB9E00F33AC0 /* PlayerType.swift in Sources */,
+				360CA54F1EDDFB4100F33AC0 /* Shield.swift in Sources */,
 				3689BD841EDC6922009EA8A2 /* AudioManager.swift in Sources */,
 				366A2B801EDB856D00A8FDAC /* AppDelegate.swift in Sources */,
-				3689BD7A1EDC6392009EA8A2 /* AKAnalogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

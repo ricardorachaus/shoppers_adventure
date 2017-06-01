@@ -10,6 +10,12 @@ import SpriteKit
 
 class Player: GameObject {
     let playerTexture: SKTexture?
+    var health: Int = 0
+    var weapon: Weapon?
+    var shield: Shield?
+    var playerType: PlayerType = .warrior
+    var level: Int = 0
+    var exp: Int = 0
     
     init(position: CGPoint) {
         playerTexture = SKTexture(imageNamed: "2")
@@ -17,9 +23,11 @@ class Player: GameObject {
         
         super.init(position: position, texture: playerTexture!)
         setupPhysicsBody()
-        self.name = "player"
-        self.zPosition = 15
-        self.setScale(3)
+        
+        name = "player"
+        zPosition = 15
+        setScale(4)
+        
         run(SKAction.animate(with: [playerTexture!], timePerFrame: 0.1))
     }
     
@@ -27,11 +35,28 @@ class Player: GameObject {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+// MARK: - Physics and movements
+
+extension Player: PlayerProtocol {
+    // Seting the physics of the player
     func setupPhysicsBody() {
         self.physicsBody = SKPhysicsBody(rectangleOf: (playerTexture?.size())!)
         self.physicsBody?.affectedByGravity = true
         self.physicsBody?.allowsRotation = false
         self.physicsBody?.categoryBitMask = CollisionType.player.rawValue
         self.physicsBody?.collisionBitMask = CollisionType.ground.rawValue
+    }
+    
+    // Move the player
+    func walk(toLeft: Bool) {
+        if toLeft {
+            position.x -= 7
+            xScale = -xScale
+        }
+        else {
+            position.x += 7
+        }
     }
 }
