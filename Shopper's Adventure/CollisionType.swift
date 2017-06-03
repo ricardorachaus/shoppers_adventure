@@ -9,5 +9,5 @@
 import Foundation
 
 enum CollisionType: UInt32 {
-    case ground = 1, player
+    case ground = 1, player, enemy
 }

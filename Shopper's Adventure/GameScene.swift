@@ -15,6 +15,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var mainCamera: SKCameraNode?
     var maxPositionX: CGFloat = 0
     var minPositionX: CGFloat = 0
+    var currentBallXPosition: CGFloat = 0
     
     let base = SKSpriteNode(imageNamed: "base")
     let ball = SKSpriteNode(imageNamed: "ball")
@@ -32,6 +33,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         initializeVariables()        
         setAnalogJoystick()
+        showLife()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,6 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         mainCamera = SKCameraNode()
         camera = mainCamera
         mainCamera?.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        currentBallXPosition = (mainCamera?.position.x)!
         
         addChild(player!)
         addChild(mainCamera!)
@@ -67,19 +70,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Move the camera along the player
     func moveCamera() {
-        if (camera?.position.x)! < maxPositionX &&
-           (camera?.position.x)! > minPositionX &&
+        if (mainCamera?.position.x)! < maxPositionX &&
+           (mainCamera?.position.x)! > minPositionX &&
            (player?.position.x)! > minPositionX {
-            camera?.position.x = (player?.position.x)!
+            
+            mainCamera?.position.x = (player?.position.x)!
         }
     }
 
-    // MARK: - Analog joystick methods
+    // MARK: - Joystick methods
     
     // Set the analog sprite to the scene
     func setAnalogJoystick() {
-        base.position = CGPoint(x: 80, y: 50)
+        base.position = CGPoint(x: -size.width * 0.4, y: -size.height * 0.4)
         ball.position = base.position
+        
+        currentBallXPosition = ball.position.x - 10
         
         base.alpha = 0.4
         ball.alpha = 0.4
@@ -90,9 +96,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         base.size = CGSize(width: size.width / 6, height: size.height / 6)
         ball.size = CGSize(width: size.width / 10, height: size.height / 10)
         
-        addChild(base)
-        addChild(ball)
+        mainCamera?.addChild(base)
+        mainCamera?.addChild(ball)
     }
+    
     
     // Set the value if the stick is active
     func setStickActive(location: CGPoint) {
@@ -107,6 +114,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Move the stick sprite
     func moveAnalogStick(location: CGPoint) {
         var toLeft: Bool
+        var jump: Bool
         
         if stickActive {
             let vector = CGVector(dx: location.x - base.position.x, dy: location.y - base.position.y)
@@ -119,10 +127,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 ball.position = location
             }
             else {
+                currentBallXPosition = base.position.x
                 ball.position = CGPoint(x: base.position.x - xDist, y: base.position.y + yDist)
                 
-                toLeft = (ball.position.x < 80) ? true : false
-                movePlayer(toLeft: toLeft)
+                toLeft = (ball.position.x < currentBallXPosition) ? true : false
+                jump = (ball.position.y > 60) ? true : false
+                movePlayer(toLeft: toLeft, isJumping: jump)
             }
         }
     }
@@ -139,8 +149,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // MARK: - Players actions methods
     
     // Move the player
-    func movePlayer(toLeft: Bool) {
-        player?.walk(toLeft: toLeft)
+    func movePlayer(toLeft: Bool, isJumping: Bool) {
+        if !isJumping {
+            player?.walk(toLeft: toLeft)
+        }
+        else {
+            player?.jump(isJumping)
+        }
+    }
+    
+    // MARK: - HUD
+    
+    // Show player life
+    func showLife() {
+        let heartPosition = CGPoint(x: -size.width / 2.2, y: size.height / 2.4)
+        
+        for index in 0..<3 {
+            let heartSprite = SKSpriteNode(imageNamed: "heart")
+            heartSprite.position = CGPoint(x: heartPosition.x + CGFloat(index) * size.width / 16, y: size.height / 2.4)
+            heartSprite.zPosition = 15
+            heartSprite.setScale(3)
+            heartSprite.name = "heart\(index)"
+            
+            mainCamera?.addChild(heartSprite)
+        }
     }
     
 }
@@ -153,18 +185,16 @@ extension GameScene {
         moveCamera()
     }
     
-    // MARK: - Touches methods
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            let location = touch.location(in: self)
+            let location = touch.location(in: self.mainCamera!)
             setStickActive(location: location)
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            let location = touch.location(in: self)
+            let location = touch.location(in: self.mainCamera!)
             moveAnalogStick(location: location)
         }
     }

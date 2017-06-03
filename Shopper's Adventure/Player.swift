@@ -8,17 +8,17 @@
 
 import SpriteKit
 
-class Player: GameObject {
+class Player: GameObject, PlayerProtocol {
     let playerTexture: SKTexture?
     var health: Int = 0
     var weapon: Weapon?
     var shield: Shield?
-    var playerType: PlayerType = .warrior
+    var playerType: PlayerType = PlayerType.random()
     var level: Int = 0
     var exp: Int = 0
     
     init(position: CGPoint) {
-        playerTexture = SKTexture(imageNamed: "2")
+        playerTexture = SKTexture(imageNamed: playerType.spriteName)
         playerTexture?.filteringMode = .nearest
         
         super.init(position: position, texture: playerTexture!)
@@ -39,7 +39,7 @@ class Player: GameObject {
 
 // MARK: - Physics and movements
 
-extension Player: PlayerProtocol {
+extension Player {
     // Seting the physics of the player
     func setupPhysicsBody() {
         self.physicsBody = SKPhysicsBody(rectangleOf: (playerTexture?.size())!)
@@ -53,10 +53,18 @@ extension Player: PlayerProtocol {
     func walk(toLeft: Bool) {
         if toLeft {
             position.x -= 7
-            xScale = -xScale
+            xScale = -fabs(xScale)
         }
         else {
             position.x += 7
+            xScale = fabs(xScale)
+        }
+    }
+    
+    // Make the player jump
+    func jump(_ isJumping: Bool) {
+        if isJumping {
+            position.y += 30
         }
     }
 }

@@ -12,6 +12,7 @@ protocol Monster {
     var health: Int { get set }
     var hitChance: Int { get set }
     var monsterType: MonsterType { get set }
+    var weapon: Weapon { get set }
     var sprite: SKSpriteNode? { get set }
     
     init(health: Int, hitChance: Int)
