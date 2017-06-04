@@ -8,7 +8,7 @@
 
 import AVFoundation
 
-class AudioManager: AudioDelegate {
+class AudioManager: AudioDataSource, AudioDelegate {
     static let audioManager = AudioManager()
     fileprivate init() {}
     

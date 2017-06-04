@@ -9,5 +9,15 @@
 import Foundation
 
 enum WeaponType: Int {
-    case sword = 0, knife
+    case sword = 0, axe, knife, stick, bow, dagger, scepter
+    
+    var spriteName: String {
+        let spriteNames = ["sword", "axe", "knife", "stick", "bow", "dagger", "scepter"]
+        
+        return spriteNames[rawValue]
+    }
+    
+    static func random() -> WeaponType {
+        return WeaponType(rawValue: Int(arc4random_uniform(7)))!
+    }
 }

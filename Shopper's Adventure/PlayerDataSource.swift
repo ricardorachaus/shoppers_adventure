@@ -8,9 +8,9 @@
 
 import SpriteKit
 
-protocol PlayerProtocol {
+protocol PlayerDataSource {
     var health: Int { get set }
-    var weapon: Weapon? { get set }
+    var weapon: Weapon { get set }
     var shield: Shield? { get set }
     var playerType: PlayerType { get set }
     var level: Int { get set }

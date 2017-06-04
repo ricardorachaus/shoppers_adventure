@@ -8,10 +8,10 @@
 
 import SpriteKit
 
-class Player: GameObject, PlayerProtocol {
+class Player: GameObject, PlayerDataSource {
     let playerTexture: SKTexture?
     var health: Int = 0
-    var weapon: Weapon?
+    var weapon: Weapon
     var shield: Shield?
     var playerType: PlayerType = PlayerType.random()
     var level: Int = 0
@@ -20,6 +20,7 @@ class Player: GameObject, PlayerProtocol {
     init(position: CGPoint) {
         playerTexture = SKTexture(imageNamed: playerType.spriteName)
         playerTexture?.filteringMode = .nearest
+        weapon = Weapon(playerType: playerType)
         
         super.init(position: position, texture: playerTexture!)
         setupPhysicsBody()
@@ -52,11 +53,11 @@ extension Player {
     // Move the player
     func walk(toLeft: Bool) {
         if toLeft {
-            position.x -= 7
+            position.x -= 9
             xScale = -fabs(xScale)
         }
         else {
-            position.x += 7
+            position.x += 9
             xScale = fabs(xScale)
         }
     }

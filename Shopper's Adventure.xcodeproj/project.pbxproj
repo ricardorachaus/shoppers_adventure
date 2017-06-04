@@ -8,9 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		36018C6C1EDFACDF00A59A0B /* AnalogStick.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 36018C6B1EDFACDF00A59A0B /* AnalogStick.atlas */; };
-		360CA54F1EDDFB4100F33AC0 /* Shield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CA54E1EDDFB4100F33AC0 /* Shield.swift */; };
+		360CA54F1EDDFB4100F33AC0 /* ShieldDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CA54E1EDDFB4100F33AC0 /* ShieldDataSource.swift */; };
 		360CA5511EDDFB9E00F33AC0 /* PlayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CA5501EDDFB9E00F33AC0 /* PlayerType.swift */; };
 		364298E21EDB8E4D000D6751 /* The Misadventure Begins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 364298E11EDB8E4D000D6751 /* The Misadventure Begins.mp3 */; };
+		3650C9241EE355BD002915A5 /* WeaponDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3650C9231EE355BD002915A5 /* WeaponDelegate.swift */; };
+		3650C9261EE355EA002915A5 /* AudioDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3650C9251EE355EA002915A5 /* AudioDataSource.swift */; };
+		3650C9281EE3565A002915A5 /* ShieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3650C9271EE3565A002915A5 /* ShieldDelegate.swift */; };
+		3650C92A1EE35703002915A5 /* MonsterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3650C9291EE35703002915A5 /* MonsterDelegate.swift */; };
+		3650C92E1EE357C4002915A5 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3650C92D1EE357C4002915A5 /* Weapon.swift */; };
+		3650C9301EE359D4002915A5 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3650C92F1EE359D4002915A5 /* Monster.swift */; };
+		3650C9321EE35B23002915A5 /* Shield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3650C9311EE35B23002915A5 /* Shield.swift */; };
+		3650C9341EE37BE6002915A5 /* BossType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3650C9331EE37BE6002915A5 /* BossType.swift */; };
+		3650C9361EE37C6D002915A5 /* Boss.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3650C9351EE37C6D002915A5 /* Boss.atlas */; };
+		3650C9381EE385A4002915A5 /* Weapon.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3650C9371EE385A4002915A5 /* Weapon.atlas */; };
 		366A2B801EDB856D00A8FDAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2B7F1EDB856D00A8FDAC /* AppDelegate.swift */; };
 		366A2B861EDB856E00A8FDAC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2B851EDB856E00A8FDAC /* GameScene.swift */; };
 		366A2B881EDB856E00A8FDAC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2B871EDB856E00A8FDAC /* GameViewController.swift */; };
@@ -28,20 +38,30 @@
 		3689BD8E1EDC777D009EA8A2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD8D1EDC777D009EA8A2 /* Player.swift */; };
 		3689BD901EDC77C8009EA8A2 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689BD8F1EDC77C8009EA8A2 /* GameObject.swift */; };
 		369711A51EDD17E300D69FC5 /* Characters.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 369711A41EDD17E300D69FC5 /* Characters.atlas */; };
-		36E9DA5F1EDDE0960061ECD2 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9DA5E1EDDE0960061ECD2 /* Weapon.swift */; };
+		36E9DA5F1EDDE0960061ECD2 /* WeaponDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9DA5E1EDDE0960061ECD2 /* WeaponDataSource.swift */; };
 		36E9DA611EDDE10A0061ECD2 /* WeaponType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9DA601EDDE10A0061ECD2 /* WeaponType.swift */; };
 		36E9DA671EDDE1C20061ECD2 /* MonsterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9DA661EDDE1C20061ECD2 /* MonsterType.swift */; };
-		36F098CB1EE02599007FEBB7 /* PlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F098C91EE02599007FEBB7 /* PlayerProtocol.swift */; };
-		36F098CD1EE025CD007FEBB7 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F098CC1EE025CD007FEBB7 /* Monster.swift */; };
+		36F098CB1EE02599007FEBB7 /* PlayerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F098C91EE02599007FEBB7 /* PlayerDataSource.swift */; };
+		36F098CD1EE025CD007FEBB7 /* MonsterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F098CC1EE025CD007FEBB7 /* MonsterDataSource.swift */; };
 		36F098D11EE0357F007FEBB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F098D01EE0357F007FEBB7 /* Main.storyboard */; };
 		36F098D31EE03BFC007FEBB7 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 36F098D21EE03BFC007FEBB7 /* heart.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		36018C6B1EDFACDF00A59A0B /* AnalogStick.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = AnalogStick.atlas; sourceTree = "<group>"; };
-		360CA54E1EDDFB4100F33AC0 /* Shield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shield.swift; sourceTree = "<group>"; };
+		360CA54E1EDDFB4100F33AC0 /* ShieldDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShieldDataSource.swift; sourceTree = "<group>"; };
 		360CA5501EDDFB9E00F33AC0 /* PlayerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerType.swift; sourceTree = "<group>"; };
 		364298E11EDB8E4D000D6751 /* The Misadventure Begins.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Misadventure Begins.mp3"; sourceTree = "<group>"; };
+		3650C9231EE355BD002915A5 /* WeaponDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponDelegate.swift; sourceTree = "<group>"; };
+		3650C9251EE355EA002915A5 /* AudioDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDataSource.swift; sourceTree = "<group>"; };
+		3650C9271EE3565A002915A5 /* ShieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShieldDelegate.swift; sourceTree = "<group>"; };
+		3650C9291EE35703002915A5 /* MonsterDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterDelegate.swift; sourceTree = "<group>"; };
+		3650C92D1EE357C4002915A5 /* Weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		3650C92F1EE359D4002915A5 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		3650C9311EE35B23002915A5 /* Shield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shield.swift; sourceTree = "<group>"; };
+		3650C9331EE37BE6002915A5 /* BossType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BossType.swift; sourceTree = "<group>"; };
+		3650C9351EE37C6D002915A5 /* Boss.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Boss.atlas; sourceTree = "<group>"; };
+		3650C9371EE385A4002915A5 /* Weapon.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Weapon.atlas; path = ../Weapon.atlas; sourceTree = "<group>"; };
 		366A2B7C1EDB856D00A8FDAC /* Shopper's Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopper's Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		366A2B7F1EDB856D00A8FDAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		366A2B851EDB856E00A8FDAC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -61,11 +81,11 @@
 		3689BD8D1EDC777D009EA8A2 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		3689BD8F1EDC77C8009EA8A2 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		369711A41EDD17E300D69FC5 /* Characters.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Characters.atlas; sourceTree = "<group>"; };
-		36E9DA5E1EDDE0960061ECD2 /* Weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		36E9DA5E1EDDE0960061ECD2 /* WeaponDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponDataSource.swift; sourceTree = "<group>"; };
 		36E9DA601EDDE10A0061ECD2 /* WeaponType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponType.swift; sourceTree = "<group>"; };
 		36E9DA661EDDE1C20061ECD2 /* MonsterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterType.swift; sourceTree = "<group>"; };
-		36F098C91EE02599007FEBB7 /* PlayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProtocol.swift; sourceTree = "<group>"; };
-		36F098CC1EE025CD007FEBB7 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		36F098C91EE02599007FEBB7 /* PlayerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDataSource.swift; sourceTree = "<group>"; };
+		36F098CC1EE025CD007FEBB7 /* MonsterDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterDataSource.swift; sourceTree = "<group>"; };
 		36F098D01EE0357F007FEBB7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		36F098D21EE03BFC007FEBB7 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,11 +172,15 @@
 		366A2B9D1EDB86F200A8FDAC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3650C9251EE355EA002915A5 /* AudioDataSource.swift */,
 				3689BD871EDC6B61009EA8A2 /* AudioDelegate.swift */,
-				36E9DA5E1EDDE0960061ECD2 /* Weapon.swift */,
-				360CA54E1EDDFB4100F33AC0 /* Shield.swift */,
-				36F098C91EE02599007FEBB7 /* PlayerProtocol.swift */,
-				36F098CC1EE025CD007FEBB7 /* Monster.swift */,
+				36F098CC1EE025CD007FEBB7 /* MonsterDataSource.swift */,
+				3650C9291EE35703002915A5 /* MonsterDelegate.swift */,
+				360CA54E1EDDFB4100F33AC0 /* ShieldDataSource.swift */,
+				3650C9271EE3565A002915A5 /* ShieldDelegate.swift */,
+				36F098C91EE02599007FEBB7 /* PlayerDataSource.swift */,
+				36E9DA5E1EDDE0960061ECD2 /* WeaponDataSource.swift */,
+				3650C9231EE355BD002915A5 /* WeaponDelegate.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -164,13 +188,15 @@
 		366A2B9E1EDB871000A8FDAC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				36F098D21EE03BFC007FEBB7 /* heart.png */,
-				36018C6B1EDFACDF00A59A0B /* AnalogStick.atlas */,
-				369711A41EDD17E300D69FC5 /* Characters.atlas */,
-				3689BD801EDC64C1009EA8A2 /* Stage1.atlas */,
-				366A2B8C1EDB856E00A8FDAC /* Assets.xcassets */,
 				364298E31EDB8E54000D6751 /* Music */,
+				36F098D21EE03BFC007FEBB7 /* heart.png */,
+				366A2B8C1EDB856E00A8FDAC /* Assets.xcassets */,
+				36018C6B1EDFACDF00A59A0B /* AnalogStick.atlas */,
+				3650C9351EE37C6D002915A5 /* Boss.atlas */,
+				369711A41EDD17E300D69FC5 /* Characters.atlas */,
 				366A2B9F1EDB875A00A8FDAC /* MainMenu.atlas */,
+				3689BD801EDC64C1009EA8A2 /* Stage1.atlas */,
+				3650C9371EE385A4002915A5 /* Weapon.atlas */,
 			);
 			name = Resources;
 			path = "Shopper's Adventure";
@@ -197,10 +223,11 @@
 			isa = PBXGroup;
 			children = (
 				3689BD851EDC69B1009EA8A2 /* AudioType.swift */,
+				3650C9331EE37BE6002915A5 /* BossType.swift */,
 				3689BD8A1EDC76D7009EA8A2 /* CollisionType.swift */,
-				36E9DA601EDDE10A0061ECD2 /* WeaponType.swift */,
 				36E9DA661EDDE1C20061ECD2 /* MonsterType.swift */,
 				360CA5501EDDFB9E00F33AC0 /* PlayerType.swift */,
+				36E9DA601EDDE10A0061ECD2 /* WeaponType.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -208,8 +235,11 @@
 		3689BD8C1EDC7758009EA8A2 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
-				3689BD8D1EDC777D009EA8A2 /* Player.swift */,
 				3689BD8F1EDC77C8009EA8A2 /* GameObject.swift */,
+				3689BD8D1EDC777D009EA8A2 /* Player.swift */,
+				3650C92F1EE359D4002915A5 /* Monster.swift */,
+				3650C9311EE35B23002915A5 /* Shield.swift */,
+				3650C92D1EE357C4002915A5 /* Weapon.swift */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -282,6 +312,8 @@
 				36F098D31EE03BFC007FEBB7 /* heart.png in Resources */,
 				366A2BA01EDB875A00A8FDAC /* MainMenu.atlas in Resources */,
 				366A2B901EDB856E00A8FDAC /* LaunchScreen.storyboard in Resources */,
+				3650C9381EE385A4002915A5 /* Weapon.atlas in Resources */,
+				3650C9361EE37C6D002915A5 /* Boss.atlas in Resources */,
 				369711A51EDD17E300D69FC5 /* Characters.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,23 +325,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3650C9341EE37BE6002915A5 /* BossType.swift in Sources */,
+				3650C9301EE359D4002915A5 /* Monster.swift in Sources */,
 				3689BD8B1EDC76D7009EA8A2 /* CollisionType.swift in Sources */,
 				366A2B861EDB856E00A8FDAC /* GameScene.swift in Sources */,
-				36F098CB1EE02599007FEBB7 /* PlayerProtocol.swift in Sources */,
+				36F098CB1EE02599007FEBB7 /* PlayerDataSource.swift in Sources */,
 				3689BD901EDC77C8009EA8A2 /* GameObject.swift in Sources */,
 				366A2BA51EDB87A300A8FDAC /* MenuBackgroundLayer.swift in Sources */,
 				3689BD881EDC6B61009EA8A2 /* AudioDelegate.swift in Sources */,
-				36E9DA5F1EDDE0960061ECD2 /* Weapon.swift in Sources */,
+				36E9DA5F1EDDE0960061ECD2 /* WeaponDataSource.swift in Sources */,
 				3689BD861EDC69B1009EA8A2 /* AudioType.swift in Sources */,
+				3650C92A1EE35703002915A5 /* MonsterDelegate.swift in Sources */,
 				36E9DA611EDDE10A0061ECD2 /* WeaponType.swift in Sources */,
 				3689BD8E1EDC777D009EA8A2 /* Player.swift in Sources */,
 				366A2B881EDB856E00A8FDAC /* GameViewController.swift in Sources */,
 				3689BD7F1EDC64B7009EA8A2 /* FirstStageBackgroundLayer.swift in Sources */,
+				3650C9321EE35B23002915A5 /* Shield.swift in Sources */,
+				3650C9241EE355BD002915A5 /* WeaponDelegate.swift in Sources */,
 				366A2BA21EDB876600A8FDAC /* MenuScene.swift in Sources */,
+				3650C9261EE355EA002915A5 /* AudioDataSource.swift in Sources */,
+				3650C9281EE3565A002915A5 /* ShieldDelegate.swift in Sources */,
+				3650C92E1EE357C4002915A5 /* Weapon.swift in Sources */,
 				36E9DA671EDDE1C20061ECD2 /* MonsterType.swift in Sources */,
-				36F098CD1EE025CD007FEBB7 /* Monster.swift in Sources */,
+				36F098CD1EE025CD007FEBB7 /* MonsterDataSource.swift in Sources */,
 				360CA5511EDDFB9E00F33AC0 /* PlayerType.swift in Sources */,
-				360CA54F1EDDFB4100F33AC0 /* Shield.swift in Sources */,
+				360CA54F1EDDFB4100F33AC0 /* ShieldDataSource.swift in Sources */,
 				3689BD841EDC6922009EA8A2 /* AudioManager.swift in Sources */,
 				366A2B801EDB856D00A8FDAC /* AppDelegate.swift in Sources */,
 			);

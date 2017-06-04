@@ -2,21 +2,42 @@
 //  Monster.swift
 //  Shopper's Adventure
 //
-//  Created by Rachaus on 01/06/17.
+//  Created by Rachaus on 03/06/17.
 //  Copyright © 2017 Rachaus. All rights reserved.
 //
 
 import SpriteKit
 
-protocol Monster {
-    var health: Int { get set }
-    var hitChance: Int { get set }
-    var monsterType: MonsterType { get set }
-    var weapon: Weapon { get set }
-    var sprite: SKSpriteNode? { get set }
+class Monster: MonsterDataSource, MonsterDelegate {
+    var health: Int
+    var hitChance: Int
+    var monsterType: MonsterType
+//    var weapon: Weapon
+    var sprite: SKSpriteNode?
     
-    init(health: Int, hitChance: Int)
-    init(health: Int, hitChance: Int, monsterType: MonsterType)
-    func attack() -> Bool
-    func die()
+    required init(health: Int, hitChance: Int) {
+        self.health = health
+        self.hitChance = hitChance
+        monsterType = MonsterType.random() 
+//        weapon = Weapon(damage: <#T##Int#>, weaponType: <#T##WeaponType#>)
+        sprite = SKSpriteNode(imageNamed: monsterType.spriteName)
+    }
+    
+    required init(health: Int, hitChance: Int, monsterType: MonsterType) {
+        self.health = health
+        self.hitChance = hitChance
+        self.monsterType = monsterType
+//        weapon = Weapon()
+        sprite = SKSpriteNode(imageNamed: monsterType.spriteName)
+    }
+    
+    func attack() -> Bool {
+        // Attack
+        
+        return true
+    }
+    
+    func die() {
+        // Die
+    }
 }

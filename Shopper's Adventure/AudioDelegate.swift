@@ -8,9 +8,7 @@
 
 import AVFoundation
 
-protocol AudioDelegate {
-    var music: AVAudioPlayer? { get set }
-    
+protocol AudioDelegate {    
     func playMenuMusic()
     func stopMusic()
     func startMusic(audioType: AudioType) -> AVAudioPlayer?

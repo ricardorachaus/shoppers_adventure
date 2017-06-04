@@ -16,6 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var maxPositionX: CGFloat = 0
     var minPositionX: CGFloat = 0
     var currentBallXPosition: CGFloat = 0
+    var jumpBallPosition: CGFloat = 0
     
     let base = SKSpriteNode(imageNamed: "base")
     let ball = SKSpriteNode(imageNamed: "ball")
@@ -28,7 +29,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         super.init(size: size)
         
         physicsWorld.contactDelegate = self
-//        physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         physicsWorld.gravity = CGVector(dx: 0, dy: -3.0)
         
         initializeVariables()        
@@ -43,7 +43,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Set the initial value of the attributes
     func initializeVariables() {
         initializeBackground()
-        player = Player(position: CGPoint(x: size.width / 2, y: size.height / 2))
+        player = Player(position: CGPoint(x: size.width / 4, y: size.height / 2))
         maxPositionX = size.width * 5
         minPositionX = size.width / 2 - 1
         
@@ -73,7 +73,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if (mainCamera?.position.x)! < maxPositionX &&
            (mainCamera?.position.x)! > minPositionX &&
            (player?.position.x)! > minPositionX {
-            
             mainCamera?.position.x = (player?.position.x)!
         }
     }
@@ -86,9 +85,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.position = base.position
         
         currentBallXPosition = ball.position.x - 10
+        jumpBallPosition = -size.height * 0.4
         
-        base.alpha = 0.4
-        ball.alpha = 0.4
+        base.alpha = 0.6
+        ball.alpha = 0.6
         
         base.zPosition = 15
         ball.zPosition = 15
@@ -131,7 +131,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 ball.position = CGPoint(x: base.position.x - xDist, y: base.position.y + yDist)
                 
                 toLeft = (ball.position.x < currentBallXPosition) ? true : false
-                jump = (ball.position.y > 60) ? true : false
+                jump = (ball.position.y > jumpBallPosition) ? true : false
                 movePlayer(toLeft: toLeft, isJumping: jump)
             }
         }

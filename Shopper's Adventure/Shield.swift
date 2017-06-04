@@ -2,15 +2,20 @@
 //  Shield.swift
 //  Shopper's Adventure
 //
-//  Created by Rachaus on 30/05/17.
+//  Created by Rachaus on 03/06/17.
 //  Copyright © 2017 Rachaus. All rights reserved.
 //
 
 import SpriteKit
 
-protocol Shield {
-    var blockChance: Int { get set }
+class Shield: ShieldDataSource, ShieldDelegate {
+    var blockChance: Int
     
-    init()
-    init(blockChance: Int)
+    required init() {
+        blockChance = 0
+    }
+    
+    required init(blockChance: Int) {
+        self.blockChance = blockChance
+    }
 }
