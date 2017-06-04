@@ -8,27 +8,30 @@
 
 import SpriteKit
 
-class Monster: MonsterDataSource, MonsterDelegate {
+class Monster: GameObject, MonsterDataSource, MonsterDelegate {
     var health: Int
     var hitChance: Int
     var monsterType: MonsterType
-//    var weapon: Weapon
-    var sprite: SKSpriteNode?
+    var monsterTexture: SKTexture?
     
-    required init(health: Int, hitChance: Int) {
+    required init(position: CGPoint, health: Int, hitChance: Int) {
         self.health = health
         self.hitChance = hitChance
-        monsterType = MonsterType.random() 
-//        weapon = Weapon(damage: <#T##Int#>, weaponType: <#T##WeaponType#>)
-        sprite = SKSpriteNode(imageNamed: monsterType.spriteName)
+        monsterType = MonsterType.random()
+        monsterTexture = SKTexture(imageNamed: monsterType.spriteName)
+        super.init(position: position, texture: monsterTexture!)
     }
     
-    required init(health: Int, hitChance: Int, monsterType: MonsterType) {
+    required init(position: CGPoint, health: Int, hitChance: Int, monsterType: MonsterType) {
         self.health = health
         self.hitChance = hitChance
         self.monsterType = monsterType
-//        weapon = Weapon()
-        sprite = SKSpriteNode(imageNamed: monsterType.spriteName)
+        monsterTexture = SKTexture(imageNamed: monsterType.spriteName)
+        super.init(position: position, texture: monsterTexture!)
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func attack() -> Bool {

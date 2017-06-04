@@ -6,11 +6,11 @@
 //  Copyright © 2017 Rachaus. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
 
 protocol MonsterDelegate {
-    init(health: Int, hitChance: Int)
-    init(health: Int, hitChance: Int, monsterType: MonsterType)
+    init(position: CGPoint, health: Int, hitChance: Int)
+    init(position: CGPoint, health: Int, hitChance: Int, monsterType: MonsterType)
     func attack() -> Bool
     func die()
 }

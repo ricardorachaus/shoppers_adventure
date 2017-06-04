@@ -13,5 +13,5 @@ protocol MonsterDataSource {
     var hitChance: Int { get set }
     var monsterType: MonsterType { get set }
 //    var weapon: Weapon { get set }
-    var sprite: SKSpriteNode? { get set }
+    var monsterTexture: SKTexture? { get set }
 }
