@@ -37,27 +37,35 @@ class Weapon: WeaponDataSource, WeaponDelegate {
     }
     
     func weaponForType(playerType: PlayerType) {
+        let result = Int(arc4random_uniform(2))
+        
         switch playerType {
-            
             case .warrior:
-                while weaponType != .sword || weaponType != .axe {
-                    weaponType = WeaponType.random()
+                if result == 1 {
+                    weaponType = .sword
                 }
-                
+                else {
+                    weaponType = .axe
+                }
+            
             case .archer:
-                while weaponType != .dagger || weaponType != .bow {
-                    weaponType = WeaponType.random()
-            }
+                if result == 1 {
+                    weaponType = .bow
+                }
+                else {
+                    weaponType = .dagger
+                }
             
             case .monk:
-                while weaponType != .stick || weaponType != .knife {
-                    weaponType = WeaponType.random()
+                if result == 1 {
+                    weaponType = .stick
+                }
+                else {
+                    weaponType = .knife
                 }
             
             case .mage:
-                while weaponType != .scepter {
-                    weaponType = WeaponType.random()
-                }
+                weaponType = .scepter
         }
     }
 }

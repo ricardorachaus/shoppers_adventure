@@ -19,7 +19,13 @@ class Monster: GameObject, MonsterDataSource, MonsterDelegate {
         self.hitChance = hitChance
         monsterType = MonsterType.random()
         monsterTexture = SKTexture(imageNamed: monsterType.spriteName)
+        
         super.init(position: position, texture: monsterTexture!)
+        setupPhysicsBody()
+        
+        name = "monster"
+        zPosition = 15
+        setScale(4)
     }
     
     required init(position: CGPoint, health: Int, hitChance: Int, monsterType: MonsterType) {
@@ -42,5 +48,23 @@ class Monster: GameObject, MonsterDataSource, MonsterDelegate {
     
     func die() {
         // Die
+    }
+    
+    static func randomPosition() -> CGPoint {
+        return CGPoint(x: CGFloat(arc4random_uniform(2000) + 200),
+                       y: CGFloat(arc4random_uniform(100) + 100))
+    }
+}
+
+// MARK: - Physics and movements
+
+extension Monster {
+    // Seting the physics of the player
+    func setupPhysicsBody() {
+        self.physicsBody = SKPhysicsBody(rectangleOf: (monsterTexture?.size())!)
+        self.physicsBody?.affectedByGravity = true
+        self.physicsBody?.allowsRotation = false
+        self.physicsBody?.categoryBitMask = CollisionType.player.rawValue
+        self.physicsBody?.collisionBitMask = CollisionType.ground.rawValue
     }
 }

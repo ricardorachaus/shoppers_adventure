@@ -52,13 +52,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         mainCamera?.position = CGPoint(x: size.width / 2, y: size.height / 2)
         currentBallXPosition = (mainCamera?.position.x)!
         
-        let monster1 = Monster(position: GameScene.randomPosition(), health: Int(arc4random_uniform(100)), hitChance: Int(arc4random_uniform(100)))
-        let monster2 = Monster(position: GameScene.randomPosition(), health: Int(arc4random_uniform(100)), hitChance: Int(arc4random_uniform(100)))
-        let monster3 = Monster(position: GameScene.randomPosition(), health: Int(arc4random_uniform(100)), hitChance: Int(arc4random_uniform(100)))
-
-        monster1.zPosition = 15
-        monster2.zPosition = 15
-        monster3.zPosition = 15
+        let monster1 = Monster(position: Monster.randomPosition(), health: Int(arc4random_uniform(100)), hitChance: Int(arc4random_uniform(100)))
+        let monster2 = Monster(position: Monster.randomPosition(), health: Int(arc4random_uniform(100)), hitChance: Int(arc4random_uniform(100)))
+        let monster3 = Monster(position: Monster.randomPosition(), health: Int(arc4random_uniform(100)), hitChance: Int(arc4random_uniform(100)))
         
         addChild(player!)
         addChild(mainCamera!)
@@ -184,10 +180,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             mainCamera?.addChild(heartSprite)
         }
-    }
-    
-    static func randomPosition() -> CGPoint {
-        return CGPoint(x: CGFloat(arc4random_uniform(1000)), y: CGFloat(arc4random_uniform(50) + 100))
     }
     
 }
