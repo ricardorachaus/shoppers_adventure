@@ -224,7 +224,11 @@ extension GameScene {
     }
 }
 
+
+// MARK: - Physics Contact Delegate methods
+
 extension GameScene: SKPhysicsContactDelegate {
+    
     func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.node?.name == "player" &&
            contact.bodyB.node?.name == "monster" &&
