@@ -14,7 +14,7 @@ class Weapon: WeaponDataSource, WeaponDelegate {
     var sprite: SKSpriteNode?
     
     init(playerType: PlayerType) {
-        damage = 0
+        damage = Int(arc4random_uniform(1000))
         weaponType = WeaponType.random()
         weaponForType(playerType: playerType)
         sprite = SKSpriteNode(imageNamed: weaponType.spriteName)

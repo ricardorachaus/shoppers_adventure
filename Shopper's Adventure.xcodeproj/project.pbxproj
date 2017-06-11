@@ -10,6 +10,7 @@
 		36018C6C1EDFACDF00A59A0B /* AnalogStick.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 36018C6B1EDFACDF00A59A0B /* AnalogStick.atlas */; };
 		360CA54F1EDDFB4100F33AC0 /* ShieldDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CA54E1EDDFB4100F33AC0 /* ShieldDataSource.swift */; };
 		360CA5511EDDFB9E00F33AC0 /* PlayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CA5501EDDFB9E00F33AC0 /* PlayerType.swift */; };
+		3631991B1EEDE1EC009C5230 /* Final Breath.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3631991A1EEDE1EC009C5230 /* Final Breath.mp3 */; };
 		364298E21EDB8E4D000D6751 /* The Misadventure Begins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 364298E11EDB8E4D000D6751 /* The Misadventure Begins.mp3 */; };
 		3650C9241EE355BD002915A5 /* WeaponDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3650C9231EE355BD002915A5 /* WeaponDelegate.swift */; };
 		3650C9261EE355EA002915A5 /* AudioDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3650C9251EE355EA002915A5 /* AudioDataSource.swift */; };
@@ -51,6 +52,7 @@
 		36018C6B1EDFACDF00A59A0B /* AnalogStick.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = AnalogStick.atlas; sourceTree = "<group>"; };
 		360CA54E1EDDFB4100F33AC0 /* ShieldDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShieldDataSource.swift; sourceTree = "<group>"; };
 		360CA5501EDDFB9E00F33AC0 /* PlayerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerType.swift; sourceTree = "<group>"; };
+		3631991A1EEDE1EC009C5230 /* Final Breath.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Final Breath.mp3"; sourceTree = "<group>"; };
 		364298E11EDB8E4D000D6751 /* The Misadventure Begins.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Misadventure Begins.mp3"; sourceTree = "<group>"; };
 		3650C9231EE355BD002915A5 /* WeaponDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponDelegate.swift; sourceTree = "<group>"; };
 		3650C9251EE355EA002915A5 /* AudioDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDataSource.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				364298E11EDB8E4D000D6751 /* The Misadventure Begins.mp3 */,
+				3631991A1EEDE1EC009C5230 /* Final Breath.mp3 */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			files = (
 				3689BD811EDC64C1009EA8A2 /* Stage1.atlas in Resources */,
 				366A2B8D1EDB856E00A8FDAC /* Assets.xcassets in Resources */,
+				3631991B1EEDE1EC009C5230 /* Final Breath.mp3 in Resources */,
 				364298E21EDB8E4D000D6751 /* The Misadventure Begins.mp3 in Resources */,
 				36F098D11EE0357F007FEBB7 /* Main.storyboard in Resources */,
 				36018C6C1EDFACDF00A59A0B /* AnalogStick.atlas in Resources */,

@@ -28,6 +28,7 @@ class Player: GameObject, PlayerDataSource {
         name = "player"
         zPosition = 15
         setScale(4)
+        health = 30
         
         run(SKAction.animate(with: [playerTexture!], timePerFrame: 0.1))
     }
@@ -43,11 +44,12 @@ class Player: GameObject, PlayerDataSource {
 extension Player {
     // Seting the physics of the player
     func setupPhysicsBody() {
-        self.physicsBody = SKPhysicsBody(rectangleOf: (playerTexture?.size())!)
-        self.physicsBody?.affectedByGravity = true
-        self.physicsBody?.allowsRotation = false
-        self.physicsBody?.categoryBitMask = CollisionType.player.rawValue
-        self.physicsBody?.collisionBitMask = CollisionType.ground.rawValue
+        physicsBody = SKPhysicsBody(rectangleOf: (playerTexture?.size())!)
+        physicsBody?.affectedByGravity = true
+        physicsBody?.allowsRotation = false
+        physicsBody?.categoryBitMask = CollisionType.player.rawValue
+        physicsBody?.collisionBitMask = CollisionType.ground.rawValue
+        physicsBody?.contactTestBitMask = CollisionType.enemy.rawValue
     }
     
     // Move the player
@@ -66,6 +68,7 @@ extension Player {
     func jump(_ isJumping: Bool) {
         if isJumping {
             position.y += 30
+            position.x += 9
         }
     }
 }

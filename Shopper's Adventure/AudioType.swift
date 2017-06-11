@@ -12,7 +12,7 @@ enum AudioType: Int {
     case menu = 0, firstStage
     
     var musicName: String {
-        let musicNames = ["The Misadventure Begins"]
+        let musicNames = ["The Misadventure Begins", "Final Breath"]
         
         return musicNames[rawValue]
     }

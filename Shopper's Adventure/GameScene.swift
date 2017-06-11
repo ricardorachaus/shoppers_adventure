@@ -10,13 +10,15 @@ import SpriteKit
 import GameplayKit
 import CoreGraphics
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene: SKScene {
     var player: Player?
     var mainCamera: SKCameraNode?
     var maxPositionX: CGFloat = 0
     var minPositionX: CGFloat = 0
     var currentBallXPosition: CGFloat = 0
     var jumpBallPosition: CGFloat = 0
+    var monsters = [Monster]()
+    var heartCount = 3
     
     let base = SKSpriteNode(imageNamed: "base")
     let ball = SKSpriteNode(imageNamed: "ball")
@@ -34,6 +36,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         initializeVariables()        
         setAnalogJoystick()
         showLife()
+        AudioManager.audioManager.playFirstStageMusic()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -52,15 +55,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         mainCamera?.position = CGPoint(x: size.width / 2, y: size.height / 2)
         currentBallXPosition = (mainCamera?.position.x)!
         
-        let monster1 = Monster(position: Monster.randomPosition(), health: Int(arc4random_uniform(100)), hitChance: Int(arc4random_uniform(100)))
-        let monster2 = Monster(position: Monster.randomPosition(), health: Int(arc4random_uniform(100)), hitChance: Int(arc4random_uniform(100)))
-        let monster3 = Monster(position: Monster.randomPosition(), health: Int(arc4random_uniform(100)), hitChance: Int(arc4random_uniform(100)))
-        
         addChild(player!)
         addChild(mainCamera!)
-        addChild(monster1)
-        addChild(monster2)
-        addChild(monster3)
+        
+        for _ in 0..<5 {
+            let monster = Monster(position: Monster.randomPosition(), health: Int(arc4random_uniform(100)), hitChance: Int(arc4random_uniform(100)))
+            monsters.append(monster)
+            addChild(monster)
+        }
     }
     
     // Create all the stage background
@@ -73,7 +75,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    // MARK: - Camera methods
+    // MARK: - Camera methods w
     
     // Move the camera along the player
     func moveCamera() {
@@ -171,7 +173,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func showLife() {
         let heartPosition = CGPoint(x: -size.width / 2.2, y: size.height / 2.4)
         
-        for index in 0..<3 {
+        for index in 1...3 {
             let heartSprite = SKSpriteNode(imageNamed: "heart")
             heartSprite.position = CGPoint(x: heartPosition.x + CGFloat(index) * size.width / 16, y: size.height / 2.4)
             heartSprite.zPosition = 15
@@ -190,6 +192,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 extension GameScene {
     override func update(_ currentTime: TimeInterval) {
         moveCamera()
+        
+        if heartCount == 0 {
+            AudioManager.audioManager.stopMusic()
+            let scene = GameScene(size: size)
+            scene.scaleMode = .aspectFill
+            view?.presentScene(scene, transition: SKTransition.fade(withDuration: 0.5))
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -214,3 +223,32 @@ extension GameScene {
         moveAnalogStickToIdlePosition()
     }
 }
+
+extension GameScene: SKPhysicsContactDelegate {
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.node?.name == "player" &&
+           contact.bodyB.node?.name == "monster" &&
+           heartCount > 0 {
+            
+            let heart = mainCamera?.childNode(withName: "heart\(heartCount)")
+            player?.health -= 10
+            heartCount -= 1
+            mainCamera?.removeChildren(in: [heart!])
+            
+        }
+        else if contact.bodyA.node?.name == "monster" &&
+                contact.bodyB.node?.name == "player" &&
+                heartCount > 0 {
+            
+            let heart = mainCamera?.childNode(withName: "heart\(heartCount)")
+            player?.health -= 10
+            heartCount -= 1
+            mainCamera?.removeChildren(in: [heart!])
+        }
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
+        // Nothing
+    }
+}
+

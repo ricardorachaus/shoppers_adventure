@@ -27,6 +27,13 @@ class AudioManager: AudioDataSource, AudioDelegate {
         music?.stop()
     }
     
+    // Start playing first stage music
+    func playFirstStageMusic() {
+        music = startMusic(audioType: .firstStage)
+        music?.volume = 0.5
+        music?.play()
+    }
+    
     // Initilize music based on it's type
     func startMusic(audioType: AudioType) -> AVAudioPlayer? {
         let music: AVAudioPlayer? = {

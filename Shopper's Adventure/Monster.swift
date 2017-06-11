@@ -61,10 +61,11 @@ class Monster: GameObject, MonsterDataSource, MonsterDelegate {
 extension Monster {
     // Seting the physics of the player
     func setupPhysicsBody() {
-        self.physicsBody = SKPhysicsBody(rectangleOf: (monsterTexture?.size())!)
-        self.physicsBody?.affectedByGravity = true
-        self.physicsBody?.allowsRotation = false
-        self.physicsBody?.categoryBitMask = CollisionType.player.rawValue
-        self.physicsBody?.collisionBitMask = CollisionType.ground.rawValue
+        physicsBody = SKPhysicsBody(rectangleOf: (monsterTexture?.size())!)
+        physicsBody?.affectedByGravity = true
+        physicsBody?.allowsRotation = false
+        physicsBody?.categoryBitMask = CollisionType.enemy.rawValue
+        physicsBody?.collisionBitMask = CollisionType.ground.rawValue
+        physicsBody?.contactTestBitMask = CollisionType.player.rawValue
     }
 }

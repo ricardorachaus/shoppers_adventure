@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
         
         let view = self.view as! SKView
         
-        view.showsPhysics = true
+//        view.showsPhysics = true
         menuScene = MenuScene(size: view.bounds.size)
         menuScene.scaleMode = .aspectFill
         view.presentScene(menuScene)
